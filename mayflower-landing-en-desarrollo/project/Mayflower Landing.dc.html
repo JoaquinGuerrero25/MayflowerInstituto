@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mayflower English Study Centre · Villa Cañás, Santa Fe</title>
+<meta name="description" content="[Descripción para buscadores: 1 o 2 frases sobre el instituto]">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&amp;family=Hanken+Grotesk:wght@400..700&amp;family=Young+Serif&amp;family=Instrument+Sans:wght@400..700&amp;family=Unbounded:wght@400..700&amp;family=Onest:wght@400..700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:92px;-webkit-text-size-adjust:100%}
+body{margin:0;background:#F6F1E6;color:#17150F;font-family:var(--f-body,'Hanken Grotesk',system-ui,sans-serif);-webkit-font-smoothing:antialiased;line-height:1.55}
+*,*::before,*::after{box-sizing:border-box}
+a{color:#1F4A34}
+a:hover{color:#B8322A}
+:focus-visible{outline:2px solid var(--focus,#1F4A34);outline-offset:3px}
+img{max-width:100%;display:block}
+@keyframes mfUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes mfImg{from{opacity:0;transform:translateY(20px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes mfDrop{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:1ms!important;animation-delay:0ms!important;transition-duration:1ms!important}}
+</style>
+</helmet>
+
+<a href="#contenido" style="position:fixed;left:1rem;top:1rem;z-index:100;background:#17150F;color:#FFFDF8;padding:.75rem 1.1rem;border-radius:10px;font-weight:600;text-decoration:none;transform:translateY(-200%)" style-focus="transform:none">Saltar al contenido</a>
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(246,241,230,.78);backdrop-filter:blur(14px) saturate(1.4);-webkit-backdrop-filter:blur(14px) saturate(1.4);border-bottom:1px solid {{ headerLine }};transition:border-color 260ms ease">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(1.25rem,4vw,2.5rem);height:76px;display:flex;align-items:center;justify-content:space-between;gap:1.5rem">
+    <a href="#inicio" aria-label="Mayflower English Study Centre, ir al inicio" style="display:flex;align-items:center;gap:.7rem;text-decoration:none;color:#17150F">
+      <span style="width:44px;height:44px;border-radius:12px;background:#1F4A34;display:grid;place-items:center;flex:none"><img src="assets/ship-white.png" alt="" style="width:31px;height:auto"></span>
+      <span style="display:flex;flex-direction:column;line-height:1">
+        <span style="font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.125rem;letter-spacing:-.01em">Mayflower</span>
+        <span style="font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#57564C;margin-top:.3rem">English Study Centre</span>
+      </span>
+    </a>
+    <sc-if value="{{ showDesktopNav }}" hint-placeholder-val="{{ true }}">
+      <nav aria-label="Principal" style="display:flex;align-items:center;gap:2rem">
+        <ul style="list-style:none;margin:0;padding:0;display:flex;gap:1.75rem">
+          <li><a href="#nosotros" style="color:#17150F;text-decoration:none;font-size:.9375rem;font-weight:500;padding:.5rem 0;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 2px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#17150F">Nosotros</a></li>
+          <li><a href="#cursos" style="color:#17150F;text-decoration:none;font-size:.9375rem;font-weight:500;padding:.5rem 0;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 2px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#17150F">Cursos</a></li>
+          <li><a href="#como-funciona" style="color:#17150F;text-decoration:none;font-size:.9375rem;font-weight:500;padding:.5rem 0;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 2px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#17150F">Cómo funciona</a></li>
+          <li><a href="#testimonios" style="color:#17150F;text-decoration:none;font-size:.9375rem;font-weight:500;padding:.5rem 0;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 2px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#17150F">Testimonios</a></li>
+          <li><a href="#faq" style="color:#17150F;text-decoration:none;font-size:.9375rem;font-weight:500;padding:.5rem 0;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 2px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#17150F">Preguntas</a></li>
+        </ul>
+        <a href="#contacto" style="display:inline-flex;align-items:center;gap:.5rem;min-height:44px;padding:0 1.25rem;border-radius:999px;background:#B8322A;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:.9375rem;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease;box-shadow:0 6px 16px -8px rgba(184,50,42,.7)" style-hover="transform:translateY(-2px);background:#A02A23;color:#FFFFFF">Contacto</a>
+      </nav>
+    </sc-if>
+    <sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+      <button id="mf-menu-btn" type="button" onClick="{{ toggleMenu }}" aria-expanded="{{ menuExp }}" aria-controls="mf-mobile-menu" aria-label="{{ menuLabel }}" style="width:48px;height:48px;border-radius:14px;border:1.5px solid #1F4A34;background:transparent;color:#1F4A34;display:grid;place-items:center;cursor:pointer">
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M6 6l12 12M18 6L6 18"></path></svg>
+        </sc-if>
+        <sc-if value="{{ menuClosed }}" hint-placeholder-val="{{ true }}">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M4 7h16M4 12h16M4 17h10"></path></svg>
+        </sc-if>
+      </button>
+    </sc-if>
+  </div>
+  <sc-if value="{{ mobileMenuVisible }}" hint-placeholder-val="{{ false }}">
+    <nav id="mf-mobile-menu" aria-label="Menú móvil" style="border-top:1px solid rgba(23,21,15,.08);padding:1rem clamp(1.25rem,4vw,2.5rem) 1.5rem;animation:mfDrop 300ms cubic-bezier(.16,1,.3,1) both">
+      <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column">
+        <li><a href="#nosotros" onClick="{{ closeMenu }}" style="display:block;padding:.9rem 0;border-bottom:1px solid #E2D9C6;color:#17150F;text-decoration:none;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.5rem">Nosotros</a></li>
+        <li><a href="#cursos" onClick="{{ closeMenu }}" style="display:block;padding:.9rem 0;border-bottom:1px solid #E2D9C6;color:#17150F;text-decoration:none;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.5rem">Cursos</a></li>
+        <li><a href="#como-funciona" onClick="{{ closeMenu }}" style="display:block;padding:.9rem 0;border-bottom:1px solid #E2D9C6;color:#17150F;text-decoration:none;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.5rem">Cómo funciona</a></li>
+        <li><a href="#testimonios" onClick="{{ closeMenu }}" style="display:block;padding:.9rem 0;border-bottom:1px solid #E2D9C6;color:#17150F;text-decoration:none;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.5rem">Testimonios</a></li>
+        <li><a href="#faq" onClick="{{ closeMenu }}" style="display:block;padding:.9rem 0;border-bottom:1px solid #E2D9C6;color:#17150F;text-decoration:none;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.5rem">Preguntas frecuentes</a></li>
+      </ul>
+      <a href="#contacto" onClick="{{ closeMenu }}" style="margin-top:1.25rem;display:flex;justify-content:center;align-items:center;min-height:52px;border-radius:999px;background:#B8322A;color:#FFFFFF;text-decoration:none;font-weight:600">Contacto</a>
+    </nav>
+  </sc-if>
+</header>
+
+<main id="contenido">
+
+<section id="inicio" aria-labelledby="hero-title" style="padding:.5rem clamp(.5rem,1.5vw,1rem) 0">
+  <div style="position:relative;overflow:hidden;border-radius:clamp(24px,3vw,36px);background:var(--hero-bg,#1F4A34);color:var(--hero-fg,#F6F1E6);--focus:var(--hero-focus,#F6F1E6)">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(70% 90% at 90% 10%,rgba(255,236,200,.13),transparent 60%),radial-gradient(60% 70% at 0% 100%,rgba(0,0,0,.14),transparent 70%)"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:var(--hero-grain,.16);mix-blend-mode:overlay;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div>
+    <img src="assets/ship-white.png" alt="" aria-hidden="true" style="position:absolute;right:-6%;bottom:-8%;width:min(62vw,640px);opacity:var(--hero-ship,.05);pointer-events:none">
+    <div style="position:relative;max-width:1240px;min-height:min(calc(100svh - 92px),880px);margin:0 auto;padding:clamp(2.75rem,7vw,5.5rem) clamp(1.25rem,4vw,3rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:clamp(2.5rem,5vw,4.5rem);align-items:center">
+      <div style="display:flex;flex-direction:column;align-items:flex-start">
+        <p style="margin:0 0 1.75rem;display:inline-flex;align-items:center;gap:.6rem;padding:.45rem .9rem .45rem .6rem;border-radius:999px;border:1px solid var(--hero-line,rgba(246,241,230,.28));font-size:.8125rem;font-weight:600;letter-spacing:.04em;animation:mfUp 700ms cubic-bezier(.16,1,.3,1) 80ms both"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#D8483C"></span>English Study Centre · Villa Cañás, Santa Fe</p>
+        <h1 id="hero-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.6rem,1.4rem + 4.6vw,5.25rem);line-height:.98;letter-spacing:-.035em;text-wrap:balance;animation:mfUp 700ms cubic-bezier(.16,1,.3,1) 160ms both">[Título principal: frase corta que resuma la propuesta]</h1>
+        <p style="margin:1.5rem 0 0;max-width:34rem;font-size:clamp(1.0625rem,1rem + .3vw,1.25rem);line-height:1.55;color:var(--hero-sub,#D3DED1);text-wrap:pretty;animation:mfUp 700ms cubic-bezier(.16,1,.3,1) 240ms both">[Subtítulo: 1 o 2 líneas sobre a quién está dirigido el instituto y qué lo hace distinto]</p>
+        <div style="margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:.75rem;animation:mfUp 700ms cubic-bezier(.16,1,.3,1) 320ms both">
+          <a href="#contacto" style="display:inline-flex;align-items:center;gap:.6rem;min-height:54px;padding:0 1.6rem;border-radius:999px;background:#B8322A;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:1.0625rem;box-shadow:0 12px 28px -12px rgba(0,0,0,.45);transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 220ms ease" style-hover="transform:translateY(-2px);background:#A02A23;color:#FFFFFF">Contactanos<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+          <a href="#cursos" style="display:inline-flex;align-items:center;min-height:54px;padding:0 1.6rem;border-radius:999px;border:1.5px solid var(--hero-fg,#F6F1E6);color:var(--hero-fg,#F6F1E6);text-decoration:none;font-weight:600;font-size:1.0625rem;transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 220ms ease" style-hover="transform:translateY(-2px);background:rgba(255,255,255,.08);color:var(--hero-fg,#F6F1E6)">Ver cursos</a>
+        </div>
+      </div>
+      <div style="position:relative;animation:mfImg 900ms cubic-bezier(.16,1,.3,1) 260ms both">
+        <div style="position:relative;overflow:hidden;border-radius:clamp(22px,2.4vw,30px);aspect-ratio:4/5;max-height:min(72svh,660px);width:100%">
+          <div data-parallax="" style="position:absolute;inset:-8% 0;transform:scale(1.08);background:repeating-linear-gradient(135deg,var(--hero-ph1,#285740) 0 12px,var(--hero-ph2,#2C5E45) 12px 24px);display:grid;place-items:center">
+            <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:var(--hero-lblbg,#173A28);color:var(--hero-lblfg,#DCE5D8)">Foto principal: alumnos en clase</span>
+          </div>
+        </div>
+        <div style="position:absolute;left:clamp(.75rem,2vw,1.25rem);right:clamp(.75rem,2vw,1.25rem);bottom:clamp(.75rem,2vw,1.25rem);max-width:320px;display:flex;align-items:center;gap:.85rem;padding:.9rem 1.1rem;border-radius:18px;background:#FFFDF8;color:#17150F;box-shadow:0 18px 40px -18px rgba(0,0,0,.45);animation:mfUp 700ms cubic-bezier(.16,1,.3,1) 620ms both">
+          <span aria-hidden="true" style="width:40px;height:40px;flex:none;border-radius:12px;background:#1F4A34;display:grid;place-items:center"><img src="assets/ship-white.png" alt="" style="width:26px"></span>
+          <span style="display:flex;flex-direction:column;line-height:1.3"><strong style="font-size:.9375rem">[Frase destacada corta]</strong><span style="font-size:.8125rem;color:#57564C">[Detalle en una línea]</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="mf-stats" aria-label="Datos clave" style="max-width:1240px;margin:0 auto;padding:clamp(3rem,6vw,5rem) clamp(1.25rem,4vw,2.5rem)">
+  <dl style="margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp(25% - .01px,(720px - 100%) * 9999,clamp(50% - .01px,(360px - 100%) * 9999,100%)),1fr));row-gap:1.5rem">
+    <div data-reveal="" style="display:flex;flex-direction:column-reverse;gap:.35rem;padding:.25rem clamp(1rem,2vw,1.75rem);border-left:2px solid #1F4A34">
+      <dt style="font-size:.9375rem;color:#57564C">[Años de trayectoria]</dt>
+      <dd style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.5rem,1.6rem + 2.6vw,3.75rem);line-height:1;letter-spacing:-.03em;color:#1F4A34;font-variant-numeric:tabular-nums">{{ s0 }}<span style="color:#B8322A">+</span></dd>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column-reverse;gap:.35rem;padding:.25rem clamp(1rem,2vw,1.75rem);border-left:2px solid #1F4A34">
+      <dt style="font-size:.9375rem;color:#57564C">[Alumnos formados]</dt>
+      <dd style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.5rem,1.6rem + 2.6vw,3.75rem);line-height:1;letter-spacing:-.03em;color:#1F4A34;font-variant-numeric:tabular-nums">{{ s1 }}<span style="color:#B8322A">+</span></dd>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column-reverse;gap:.35rem;padding:.25rem clamp(1rem,2vw,1.75rem);border-left:2px solid #1F4A34">
+      <dt style="font-size:.9375rem;color:#57564C">[Niveles o cursos]</dt>
+      <dd style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.5rem,1.6rem + 2.6vw,3.75rem);line-height:1;letter-spacing:-.03em;color:#1F4A34;font-variant-numeric:tabular-nums">{{ s2 }}</dd>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column-reverse;gap:.35rem;padding:.25rem clamp(1rem,2vw,1.75rem);border-left:2px solid #1F4A34">
+      <dt style="font-size:.9375rem;color:#57564C">[Dato a elección, ej. aprobación de exámenes]</dt>
+      <dd style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.5rem,1.6rem + 2.6vw,3.75rem);line-height:1;letter-spacing:-.03em;color:#1F4A34;font-variant-numeric:tabular-nums">{{ s3 }}<span style="color:#B8322A">%</span></dd>
+    </div>
+  </dl>
+</section>
+
+<section id="nosotros" aria-labelledby="nosotros-title" style="max-width:1240px;margin:0 auto;padding:clamp(3rem,8vw,6.5rem) clamp(1.25rem,4vw,2.5rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:clamp(2.5rem,6vw,5.5rem);align-items:center">
+  <div data-reveal="" style="position:relative;overflow:hidden;border-radius:28px;aspect-ratio:5/4">
+    <div data-parallax="" style="position:absolute;inset:-8% 0;transform:scale(1.08);background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center">
+      <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6">Foto del instituto o del equipo docente</span>
+    </div>
+  </div>
+  <div data-reveal="">
+    <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Sobre nosotros</p>
+    <h2 id="nosotros-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: quiénes somos, en una frase]</h2>
+    <p style="margin:1.5rem 0 0;font-size:1.125rem;color:#3E3D35;text-wrap:pretty;max-width:36rem">[Presentación del instituto, 3 a 4 líneas: historia, forma de enseñar y qué se vive en las clases.]</p>
+    <p style="margin:1rem 0 0;font-size:1.125rem;color:#3E3D35;text-wrap:pretty;max-width:36rem">[Segundo párrafo opcional: el equipo docente y su formación.]</p>
+    <div style="margin-top:2rem;display:flex;align-items:center;gap:1rem">
+      <span aria-hidden="true" style="width:52px;height:52px;border-radius:50%;flex:none;background:repeating-linear-gradient(135deg,#EAE2D0 0 6px,#E3D9C4 6px 12px);border:1px solid #E2D9C6"></span>
+      <span style="display:flex;flex-direction:column;line-height:1.35"><strong>[Nombre de la directora]</strong><span style="font-size:.9375rem;color:#57564C">[Cargo o título]</span></span>
+    </div>
+  </div>
+</section>
+
+<section id="por-que" aria-labelledby="porque-title" style="background:#FFFDF8;border-top:1px solid #E9E1CF;border-bottom:1px solid #E9E1CF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(4rem,9vw,7rem) clamp(1.25rem,4vw,2.5rem)">
+    <div data-reveal="" style="max-width:40rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Por qué elegirnos</p>
+      <h2 id="porque-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: lo que nos hace distintos]</h2>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,270px),1fr));gap:1rem">
+      <li data-reveal="" style="grid-row:span 2;display:flex;flex-direction:column;gap:1rem;padding:clamp(1.5rem,3vw,2.25rem);border-radius:26px;background:#1F4A34;color:#F6F1E6;--focus:#F6F1E6;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 24px 44px -24px rgba(23,58,40,.7)">
+        <span aria-hidden="true" style="width:56px;height:56px;border-radius:16px;background:#173A28;display:grid;place-items:center;color:#F6F1E6"><svg width="28" height="28" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(1.5rem,1.2rem + 1vw,2rem);line-height:1.1;letter-spacing:-.02em">[Beneficio principal]</h3>
+        <p style="margin:0;color:#D3DED1;font-size:1.0625rem;text-wrap:pretty">[Descripción del beneficio principal, 2 líneas]</p>
+        <div style="margin-top:auto;min-height:150px;flex:1;border-radius:18px;background:repeating-linear-gradient(135deg,#285740 0 12px,#2C5E45 12px 24px);display:grid;place-items:center;padding:1rem">
+          <span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#173A28;color:#DCE5D8;text-align:center">Foto: profesora con alumnos</span>
+        </div>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(23,21,15,.35)">
+        <span aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:#DDE6DA;display:grid;place-items:center;color:#1F4A34"><svg width="24" height="24" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg></span>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.3125rem;line-height:1.15;letter-spacing:-.01em">[Beneficio 2]</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Una línea de descripción]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(23,21,15,.35)">
+        <span aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:#DDE6DA;display:grid;place-items:center;color:#1F4A34"><svg width="24" height="24" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M16.24 7.76l-2.12 6.36-6.36 2.12 2.12-6.36z"></path></svg></span>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.3125rem;line-height:1.15;letter-spacing:-.01em">[Beneficio 3]</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Una línea de descripción]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(23,21,15,.35)">
+        <span aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:#DDE6DA;display:grid;place-items:center;color:#1F4A34"><svg width="24" height="24" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="8" r="6"></circle><path d="M15.48 12.89L17 22l-5-3-5 3 1.52-9.11"></path></svg></span>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.3125rem;line-height:1.15;letter-spacing:-.01em">[Beneficio 4]</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Una línea de descripción]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 20px 40px -26px rgba(23,21,15,.35)">
+        <span aria-hidden="true" style="width:48px;height:48px;border-radius:14px;background:#DDE6DA;display:grid;place-items:center;color:#1F4A34"><svg width="24" height="24" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></span>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.3125rem;line-height:1.15;letter-spacing:-.01em">[Beneficio 5]</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Una línea de descripción]</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="cursos" aria-labelledby="cursos-title" style="max-width:1240px;margin:0 auto;padding:clamp(4rem,9vw,7rem) clamp(1.25rem,4vw,2.5rem)">
+  <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+    <div style="max-width:40rem">
+      <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Cursos</p>
+      <h2 id="cursos-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: un curso para cada etapa]</h2>
+    </div>
+    <p style="margin:0;max-width:24rem;color:#57564C;text-wrap:pretty">[Bajada breve sobre la oferta de cursos, 1 o 2 líneas]</p>
+  </div>
+  <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(clamp((100% - 3rem) / 4 - .01px,(calc(920px + 3rem) - 100%) * 9999,clamp((100% - 1rem) / 2 - .01px,(calc(460px + 1rem) - 100%) * 9999,100%)),1fr));gap:1rem">
+    <li data-reveal="" style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#FFFDF8;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(23,21,15,.4)">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6">Foto: clase de Kids</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:.6rem;padding:1.5rem">
+        <span style="align-self:flex-start;font-size:.8125rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;background:#DDE6DA;color:#1F4A34">[Rango de edad]</span>
+        <h3 style="margin:.25rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.625rem;line-height:1.1;letter-spacing:-.02em">Kids</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Descripción breve del curso Kids, 2 líneas]</p>
+        <a href="#contacto" aria-label="Ver más sobre el curso Kids" style="margin-top:auto;padding-top:.75rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.4rem;color:#1F4A34;font-weight:700;text-decoration:none;background:linear-gradient(#B8322A,#B8322A) left 100%/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#1F4A34">Ver más<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+    </li>
+    <li data-reveal="" style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#FFFDF8;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(23,21,15,.4)">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6">Foto: adolescentes en clase</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:.6rem;padding:1.5rem">
+        <span style="align-self:flex-start;font-size:.8125rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;background:#DDE6DA;color:#1F4A34">[Rango de edad]</span>
+        <h3 style="margin:.25rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.625rem;line-height:1.1;letter-spacing:-.02em">Adolescentes</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Descripción breve del curso para adolescentes, 2 líneas]</p>
+        <a href="#contacto" aria-label="Ver más sobre el curso Adolescentes" style="margin-top:auto;padding-top:.75rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.4rem;color:#1F4A34;font-weight:700;text-decoration:none;background:linear-gradient(#B8322A,#B8322A) left 100%/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#1F4A34">Ver más<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+    </li>
+    <li data-reveal="" style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#FFFDF8;border:1px solid #E9E1CF;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 22px 44px -28px rgba(23,21,15,.4)">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6">Foto: grupo de adultos</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:.6rem;padding:1.5rem">
+        <span style="align-self:flex-start;font-size:.8125rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;background:#DDE6DA;color:#1F4A34">[Rango de edad]</span>
+        <h3 style="margin:.25rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.625rem;line-height:1.1;letter-spacing:-.02em">Adultos</h3>
+        <p style="margin:0;color:#57564C;text-wrap:pretty">[Descripción breve del curso para adultos, 2 líneas]</p>
+        <a href="#contacto" aria-label="Ver más sobre el curso Adultos" style="margin-top:auto;padding-top:.75rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.4rem;color:#1F4A34;font-weight:700;text-decoration:none;background:linear-gradient(#B8322A,#B8322A) left 100%/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#1F4A34">Ver más<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+    </li>
+    <li data-reveal="" style="display:flex;flex-direction:column;border-radius:26px;overflow:hidden;background:#1F4A34;color:#F6F1E6;--focus:#F6F1E6;transition:transform 260ms cubic-bezier(.16,1,.3,1),box-shadow 260ms ease" style-hover="transform:translateY(-4px);box-shadow:0 22px 44px -24px rgba(23,58,40,.7)">
+      <div style="aspect-ratio:4/3;background:repeating-linear-gradient(135deg,#285740 0 12px,#2C5E45 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#173A28;color:#DCE5D8">Foto: alumnos con certificado</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;gap:.6rem;padding:1.5rem">
+        <span style="align-self:flex-start;font-size:.8125rem;font-weight:600;padding:.3rem .7rem;border-radius:999px;background:#173A28;color:#DCE5D8">[Rango de edad o nivel]</span>
+        <h3 style="margin:.25rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.625rem;line-height:1.1;letter-spacing:-.02em">Exámenes internacionales</h3>
+        <p style="margin:0;color:#D3DED1;text-wrap:pretty">[Descripción breve de la preparación para exámenes, 2 líneas]</p>
+        <a href="#contacto" aria-label="Ver más sobre la preparación para exámenes internacionales" style="margin-top:auto;padding-top:.75rem;align-self:flex-start;display:inline-flex;align-items:center;gap:.4rem;color:#F6F1E6;font-weight:700;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#F6F1E6">Ver más<svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<section id="como-funciona" aria-labelledby="pasos-title" style="max-width:1240px;margin:0 auto;padding:clamp(2rem,5vw,3rem) clamp(1.25rem,4vw,2.5rem) clamp(4rem,9vw,7rem)">
+  <div style="border-radius:clamp(24px,3vw,36px);background:#EFE7D6;padding:clamp(2rem,5vw,4rem)">
+    <div data-reveal="" style="max-width:40rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Cómo funciona</p>
+      <h2 id="pasos-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: empezar es simple]</h2>
+    </div>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:clamp(1.75rem,3vw,2.5rem)">
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem">
+        <div aria-hidden="true" style="display:flex;align-items:center;gap:.75rem"><span style="width:56px;height:56px;flex:none;border-radius:50%;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.25rem">01</span><span style="flex:1;height:0;border-top:1.5px dashed #A99F88"></span></div>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.375rem;line-height:1.15">Contactanos</h3>
+        <p style="margin:0;color:#4A493F;text-wrap:pretty">[Explicación del paso, 1 o 2 líneas]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem">
+        <div aria-hidden="true" style="display:flex;align-items:center;gap:.75rem"><span style="width:56px;height:56px;flex:none;border-radius:50%;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.25rem">02</span><span style="flex:1;height:0;border-top:1.5px dashed #A99F88"></span></div>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.375rem;line-height:1.15">Prueba de nivel</h3>
+        <p style="margin:0;color:#4A493F;text-wrap:pretty">[Explicación del paso, 1 o 2 líneas]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem">
+        <div aria-hidden="true" style="display:flex;align-items:center;gap:.75rem"><span style="width:56px;height:56px;flex:none;border-radius:50%;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.25rem">03</span><span style="flex:1;height:0;border-top:1.5px dashed #A99F88"></span></div>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.375rem;line-height:1.15">Elegí tu curso</h3>
+        <p style="margin:0;color:#4A493F;text-wrap:pretty">[Explicación del paso, 1 o 2 líneas]</p>
+      </li>
+      <li data-reveal="" style="display:flex;flex-direction:column;gap:.75rem">
+        <div aria-hidden="true" style="display:flex;align-items:center;gap:.75rem"><span style="width:56px;height:56px;flex:none;border-radius:50%;background:#B8322A;color:#FFFFFF;display:grid;place-items:center;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.25rem">04</span></div>
+        <h3 style="margin:.5rem 0 0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.375rem;line-height:1.15">Empezá a aprender</h3>
+        <p style="margin:0;color:#4A493F;text-wrap:pretty">[Explicación del paso, 1 o 2 líneas]</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="testimonios" aria-labelledby="testimonios-title" style="background:#FFFDF8;border-top:1px solid #E9E1CF;border-bottom:1px solid #E9E1CF">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(4rem,9vw,7rem) clamp(1.25rem,4vw,2.5rem)">
+    <div data-reveal="" style="max-width:40rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+      <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Testimonios</p>
+      <h2 id="testimonios-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: lo que dicen las familias y alumnos]</h2>
+    </div>
+    <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:1rem">
+      <li data-reveal="">
+        <figure style="margin:0;height:100%;display:flex;flex-direction:column;gap:1.5rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF">
+          <span aria-hidden="true" style="font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-size:4rem;line-height:.6;color:#B8322A;height:2rem">“</span>
+          <blockquote style="margin:0;font-size:1.1875rem;line-height:1.5;text-wrap:pretty">[Cita del testimonio, 2 a 3 líneas, en palabras de la persona]</blockquote>
+          <figcaption style="margin-top:auto;display:flex;align-items:center;gap:.85rem">
+            <span aria-hidden="true" style="width:52px;height:52px;flex:none;border-radius:50%;background:repeating-linear-gradient(135deg,#EAE2D0 0 6px,#E0D6C0 6px 12px);border:1px solid #E2D9C6"></span>
+            <span style="display:flex;flex-direction:column;line-height:1.35"><strong>[Nombre]</strong><span style="font-size:.9375rem;color:#57564C">[Mamá de alumno de Kids]</span></span>
+          </figcaption>
+        </figure>
+      </li>
+      <li data-reveal="">
+        <figure style="margin:0;height:100%;display:flex;flex-direction:column;gap:1.5rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#1F4A34;color:#F6F1E6">
+          <span aria-hidden="true" style="font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-size:4rem;line-height:.6;color:#F09A8F;height:2rem">“</span>
+          <blockquote style="margin:0;font-size:1.1875rem;line-height:1.5;text-wrap:pretty">[Cita del testimonio, 2 a 3 líneas, en palabras de la persona]</blockquote>
+          <figcaption style="margin-top:auto;display:flex;align-items:center;gap:.85rem">
+            <span aria-hidden="true" style="width:52px;height:52px;flex:none;border-radius:50%;background:repeating-linear-gradient(135deg,#285740 0 6px,#2F6249 6px 12px);border:1px solid #33664C"></span>
+            <span style="display:flex;flex-direction:column;line-height:1.35"><strong>[Nombre]</strong><span style="font-size:.9375rem;color:#D3DED1">[Alumna adolescente]</span></span>
+          </figcaption>
+        </figure>
+      </li>
+      <li data-reveal="">
+        <figure style="margin:0;height:100%;display:flex;flex-direction:column;gap:1.5rem;padding:clamp(1.5rem,3vw,2rem);border-radius:26px;background:#F6F1E6;border:1px solid #E9E1CF">
+          <span aria-hidden="true" style="font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-size:4rem;line-height:.6;color:#B8322A;height:2rem">“</span>
+          <blockquote style="margin:0;font-size:1.1875rem;line-height:1.5;text-wrap:pretty">[Cita del testimonio, 2 a 3 líneas, en palabras de la persona]</blockquote>
+          <figcaption style="margin-top:auto;display:flex;align-items:center;gap:.85rem">
+            <span aria-hidden="true" style="width:52px;height:52px;flex:none;border-radius:50%;background:repeating-linear-gradient(135deg,#EAE2D0 0 6px,#E0D6C0 6px 12px);border:1px solid #E2D9C6"></span>
+            <span style="display:flex;flex-direction:column;line-height:1.35"><strong>[Nombre]</strong><span style="font-size:.9375rem;color:#57564C">[Alumno adulto]</span></span>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section id="galeria" aria-labelledby="galeria-title" style="max-width:1240px;margin:0 auto;padding:clamp(4rem,9vw,7rem) clamp(1.25rem,4vw,2.5rem)">
+  <div data-reveal="" style="display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.5rem;margin-bottom:clamp(2rem,4vw,3rem)">
+    <div style="max-width:40rem">
+      <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Vida en el instituto</p>
+      <h2 id="galeria-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: así se vive Mayflower]</h2>
+    </div>
+    <a href="#" style="display:inline-flex;align-items:center;gap:.5rem;min-height:44px;color:#1F4A34;font-weight:700;text-decoration:none;background:linear-gradient(#B8322A,#B8322A) left calc(100% - 8px)/0% 2px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 2px;color:#1F4A34"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>Ver más en Instagram</a>
+  </div>
+  <ul style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,220px),1fr));grid-auto-rows:clamp(150px,18vw,200px);grid-auto-flow:dense;gap:1rem">
+    <li data-reveal="" style="grid-row:span 2;border-radius:22px;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Foto: actividad en el aula</span></li>
+    <li data-reveal="" style="border-radius:22px;background:repeating-linear-gradient(135deg,#285740 0 12px,#2C5E45 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#173A28;color:#DCE5D8;text-align:center">Foto: evento o celebración</span></li>
+    <li data-reveal="" style="border-radius:22px;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Foto: juegos en clase</span></li>
+    <li data-reveal="" style="grid-row:span 2;border-radius:22px;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Foto: entrega de certificados</span></li>
+    <li data-reveal="" style="border-radius:22px;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Foto: materiales y libros</span></li>
+    <li data-reveal="" style="border-radius:22px;background:repeating-linear-gradient(135deg,#F1D9D3 0 12px,#ECD0C9 12px 24px);display:grid;place-items:center;padding:1rem"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Foto: actividad al aire libre</span></li>
+  </ul>
+</section>
+
+<section id="faq" aria-labelledby="faq-title" style="max-width:1240px;margin:0 auto;padding:clamp(2rem,5vw,3rem) clamp(1.25rem,4vw,2.5rem) clamp(4rem,9vw,7rem);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:clamp(2rem,6vw,5rem);align-items:start">
+  <div data-reveal="">
+    <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Preguntas frecuentes</p>
+    <h2 id="faq-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: dudas que suelen tener las familias]</h2>
+    <p style="margin:1.25rem 0 0;color:#57564C;max-width:28rem">¿No encontrás tu respuesta? <a href="#contacto" style="color:#1F4A34;font-weight:700;text-underline-offset:3px">Escribinos</a> y te contamos.</p>
+  </div>
+  <div data-reveal="" style="border-top:1px solid #D8CEB9">
+    <div style="border-bottom:1px solid #D8CEB9">
+      <h3 style="margin:0"><button id="faq-b0" type="button" onClick="{{ faqToggle0 }}" aria-expanded="{{ faqExp0 }}" aria-controls="faq-p0" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;background:none;border:0;cursor:pointer;text-align:left;color:#17150F;font:inherit;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,600);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.3">[Pregunta 1: por ejemplo, sobre edades de inicio]<span aria-hidden="true" style="width:36px;height:36px;flex:none;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transform:{{ faqRot0 }};transition:transform 360ms cubic-bezier(.16,1,.3,1)"><svg width="16" height="16" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+      <div id="faq-p0" role="region" aria-labelledby="faq-b0" style="display:grid;grid-template-rows:{{ faqRows0 }};visibility:{{ faqVis0 }};transition:grid-template-rows 360ms cubic-bezier(.16,1,.3,1),visibility 360ms"><div style="overflow:hidden"><p style="margin:0;padding:0 3rem 1.5rem 0;color:#4A493F;opacity:{{ faqOp0 }};transition:opacity 300ms ease">[Respuesta a la pregunta 1, 2 a 3 líneas]</p></div></div>
+    </div>
+    <div style="border-bottom:1px solid #D8CEB9">
+      <h3 style="margin:0"><button id="faq-b1" type="button" onClick="{{ faqToggle1 }}" aria-expanded="{{ faqExp1 }}" aria-controls="faq-p1" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;background:none;border:0;cursor:pointer;text-align:left;color:#17150F;font:inherit;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,600);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.3">[Pregunta 2: por ejemplo, sobre la prueba de nivel]<span aria-hidden="true" style="width:36px;height:36px;flex:none;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transform:{{ faqRot1 }};transition:transform 360ms cubic-bezier(.16,1,.3,1)"><svg width="16" height="16" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+      <div id="faq-p1" role="region" aria-labelledby="faq-b1" style="display:grid;grid-template-rows:{{ faqRows1 }};visibility:{{ faqVis1 }};transition:grid-template-rows 360ms cubic-bezier(.16,1,.3,1),visibility 360ms"><div style="overflow:hidden"><p style="margin:0;padding:0 3rem 1.5rem 0;color:#4A493F;opacity:{{ faqOp1 }};transition:opacity 300ms ease">[Respuesta a la pregunta 2, 2 a 3 líneas]</p></div></div>
+    </div>
+    <div style="border-bottom:1px solid #D8CEB9">
+      <h3 style="margin:0"><button id="faq-b2" type="button" onClick="{{ faqToggle2 }}" aria-expanded="{{ faqExp2 }}" aria-controls="faq-p2" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;background:none;border:0;cursor:pointer;text-align:left;color:#17150F;font:inherit;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,600);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.3">[Pregunta 3: por ejemplo, sobre horarios y cantidad de alumnos por grupo]<span aria-hidden="true" style="width:36px;height:36px;flex:none;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transform:{{ faqRot2 }};transition:transform 360ms cubic-bezier(.16,1,.3,1)"><svg width="16" height="16" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+      <div id="faq-p2" role="region" aria-labelledby="faq-b2" style="display:grid;grid-template-rows:{{ faqRows2 }};visibility:{{ faqVis2 }};transition:grid-template-rows 360ms cubic-bezier(.16,1,.3,1),visibility 360ms"><div style="overflow:hidden"><p style="margin:0;padding:0 3rem 1.5rem 0;color:#4A493F;opacity:{{ faqOp2 }};transition:opacity 300ms ease">[Respuesta a la pregunta 3, 2 a 3 líneas]</p></div></div>
+    </div>
+    <div style="border-bottom:1px solid #D8CEB9">
+      <h3 style="margin:0"><button id="faq-b3" type="button" onClick="{{ faqToggle3 }}" aria-expanded="{{ faqExp3 }}" aria-controls="faq-p3" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;background:none;border:0;cursor:pointer;text-align:left;color:#17150F;font:inherit;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,600);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.3">[Pregunta 4: por ejemplo, sobre materiales]<span aria-hidden="true" style="width:36px;height:36px;flex:none;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transform:{{ faqRot3 }};transition:transform 360ms cubic-bezier(.16,1,.3,1)"><svg width="16" height="16" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+      <div id="faq-p3" role="region" aria-labelledby="faq-b3" style="display:grid;grid-template-rows:{{ faqRows3 }};visibility:{{ faqVis3 }};transition:grid-template-rows 360ms cubic-bezier(.16,1,.3,1),visibility 360ms"><div style="overflow:hidden"><p style="margin:0;padding:0 3rem 1.5rem 0;color:#4A493F;opacity:{{ faqOp3 }};transition:opacity 300ms ease">[Respuesta a la pregunta 4, 2 a 3 líneas]</p></div></div>
+    </div>
+    <div style="border-bottom:1px solid #D8CEB9">
+      <h3 style="margin:0"><button id="faq-b4" type="button" onClick="{{ faqToggle4 }}" aria-expanded="{{ faqExp4 }}" aria-controls="faq-p4" style="width:100%;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.35rem 0;background:none;border:0;cursor:pointer;text-align:left;color:#17150F;font:inherit;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,600);font-size:clamp(1.0625rem,1rem + .4vw,1.3125rem);line-height:1.3">[Pregunta 5: por ejemplo, sobre inscripción durante el año]<span aria-hidden="true" style="width:36px;height:36px;flex:none;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transform:{{ faqRot4 }};transition:transform 360ms cubic-bezier(.16,1,.3,1)"><svg width="16" height="16" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round"><path d="M12 5v14M5 12h14"></path></svg></span></button></h3>
+      <div id="faq-p4" role="region" aria-labelledby="faq-b4" style="display:grid;grid-template-rows:{{ faqRows4 }};visibility:{{ faqVis4 }};transition:grid-template-rows 360ms cubic-bezier(.16,1,.3,1),visibility 360ms"><div style="overflow:hidden"><p style="margin:0;padding:0 3rem 1.5rem 0;color:#4A493F;opacity:{{ faqOp4 }};transition:opacity 300ms ease">[Respuesta a la pregunta 5, 2 a 3 líneas]</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="cta-title" style="padding:0 clamp(.5rem,1.5vw,1rem)">
+  <div data-reveal="" style="position:relative;overflow:hidden;border-radius:clamp(24px,3vw,36px);background:#1F4A34;color:#F6F1E6;--focus:#F6F1E6">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 90% at 15% 0%,rgba(255,236,200,.12),transparent 60%)"></div>
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:overlay;background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22220%22 height=%22220%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%22.8%22 numOctaves=%222%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E')"></div>
+    <img src="assets/ship-white.png" alt="" aria-hidden="true" style="position:absolute;right:-4%;top:50%;transform:translateY(-50%);width:min(70vw,560px);opacity:.06;pointer-events:none">
+    <div style="position:relative;max-width:1240px;margin:0 auto;padding:clamp(3.5rem,9vw,7rem) clamp(1.5rem,5vw,4rem);display:flex;flex-direction:column;align-items:flex-start;gap:1.5rem">
+      <h2 id="cta-title" style="margin:0;max-width:18ch;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2.25rem,1.3rem + 4vw,4.5rem);line-height:1;letter-spacing:-.035em;text-wrap:balance">[Llamado a la acción: frase que invite a dar el primer paso]</h2>
+      <p style="margin:0;max-width:36rem;font-size:1.1875rem;color:#D3DED1;text-wrap:pretty">[Texto corto de apoyo, 1 o 2 líneas: por ejemplo, disponibilidad de cupos]</p>
+      <div style="margin-top:.75rem;display:flex;flex-wrap:wrap;gap:.75rem">
+        <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.65rem;min-height:56px;padding:0 1.75rem;border-radius:999px;background:#B8322A;color:#FFFFFF;text-decoration:none;font-weight:600;font-size:1.0625rem;box-shadow:0 14px 30px -14px rgba(0,0,0,.5);transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 220ms ease" style-hover="transform:translateY(-2px);background:#A02A23;color:#FFFFFF"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg>Escribinos por WhatsApp<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"> (se abre en una pestaña nueva)</span></a>
+        <a href="#contacto" style="display:inline-flex;align-items:center;min-height:56px;padding:0 1.6rem;border-radius:999px;border:1.5px solid #F6F1E6;color:#F6F1E6;text-decoration:none;font-weight:600;font-size:1.0625rem;transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 220ms ease" style-hover="transform:translateY(-2px);background:rgba(255,255,255,.08);color:#F6F1E6">Dejanos tu consulta</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" aria-labelledby="contacto-title" style="max-width:1240px;margin:0 auto;padding:clamp(4rem,9vw,7rem) clamp(1.25rem,4vw,2.5rem)">
+  <div data-reveal="" style="max-width:40rem;margin-bottom:clamp(2.5rem,5vw,3.5rem)">
+    <p style="margin:0 0 1.1rem;display:flex;align-items:center;gap:.65rem;font-size:.8125rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#1F4A34"><span aria-hidden="true" style="width:22px;height:2px;background:#B8322A;border-radius:2px"></span>Contacto y ubicación</p>
+    <h2 id="contacto-title" style="margin:0;font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:clamp(2rem,1.2rem + 3vw,3.25rem);line-height:1.04;letter-spacing:-.025em;text-wrap:balance">[Título: hablemos]</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:1rem;align-items:stretch">
+    <form data-reveal="" onSubmit="{{ onSubmit }}" novalidate="" aria-label="Formulario de contacto" style="display:flex;flex-direction:column;gap:1.1rem;padding:clamp(1.5rem,3.5vw,2.5rem);border-radius:26px;background:#FFFDF8;border:1px solid #E9E1CF">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1.1rem">
+        <div style="display:flex;flex-direction:column;gap:.45rem">
+          <label for="f-nombre" style="font-weight:600;font-size:.9375rem">Nombre</label>
+          <input id="f-nombre" name="nombre" type="text" autocomplete="name" required="" aria-describedby="f-nombre-err" style="min-height:52px;padding:0 1rem;border-radius:14px;border:1.5px solid #8F8A7A;background:#FFFFFF;color:#17150F;font:inherit;font-size:1rem" style-focus="border-color:#1F4A34">
+          <span id="f-nombre-err" style="font-size:.875rem;color:#A02A23;min-height:0">{{ errNombre }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:.45rem">
+          <label for="f-tel" style="font-weight:600;font-size:.9375rem">Teléfono</label>
+          <input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" style="min-height:52px;padding:0 1rem;border-radius:14px;border:1.5px solid #8F8A7A;background:#FFFFFF;color:#17150F;font:inherit;font-size:1rem" style-focus="border-color:#1F4A34">
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.45rem">
+        <label for="f-mail" style="font-weight:600;font-size:.9375rem">Email</label>
+        <input id="f-mail" name="email" type="email" autocomplete="email" required="" aria-describedby="f-mail-err" style="min-height:52px;padding:0 1rem;border-radius:14px;border:1.5px solid #8F8A7A;background:#FFFFFF;color:#17150F;font:inherit;font-size:1rem" style-focus="border-color:#1F4A34">
+        <span id="f-mail-err" style="font-size:.875rem;color:#A02A23">{{ errMail }}</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:.45rem">
+        <label for="f-consulta" style="font-weight:600;font-size:.9375rem">Consulta</label>
+        <textarea id="f-consulta" name="consulta" rows="5" style="padding:.85rem 1rem;border-radius:14px;border:1.5px solid #8F8A7A;background:#FFFFFF;color:#17150F;font:inherit;font-size:1rem;resize:vertical" style-focus="border-color:#1F4A34"></textarea>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:1rem;margin-top:.25rem">
+        <button type="submit" style="display:inline-flex;align-items:center;gap:.6rem;min-height:54px;padding:0 1.75rem;border-radius:999px;border:0;background:#B8322A;color:#FFFFFF;font:inherit;font-weight:600;font-size:1.0625rem;cursor:pointer;transition:transform 220ms cubic-bezier(.16,1,.3,1),background-color 220ms ease" style-hover="transform:translateY(-2px);background:#A02A23">Enviar consulta<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+        <p role="status" aria-live="polite" style="margin:0;color:#1F4A34;font-weight:600">{{ formStatus }}</p>
+      </div>
+    </form>
+    <div style="display:grid;gap:1rem;grid-template-rows:auto 1fr">
+      <div data-reveal="" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:1.5rem;padding:clamp(1.5rem,3.5vw,2.25rem);border-radius:26px;background:#EFE7D6">
+        <div style="display:flex;gap:.85rem"><span aria-hidden="true" style="width:40px;height:40px;flex:none;border-radius:12px;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center"><svg width="20" height="20" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span><div><h3 style="margin:0;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:#4A493F">Dirección</h3><p style="margin:.25rem 0 0;font-weight:600">[Calle y número]<br>Villa Cañás, Santa Fe</p></div></div>
+        <div style="display:flex;gap:.85rem"><span aria-hidden="true" style="width:40px;height:40px;flex:none;border-radius:12px;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center"><svg width="20" height="20" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg></span><div><h3 style="margin:0;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:#4A493F">WhatsApp y teléfono</h3><p style="margin:.25rem 0 0;font-weight:600">[Número de contacto]</p></div></div>
+        <div style="display:flex;gap:.85rem"><span aria-hidden="true" style="width:40px;height:40px;flex:none;border-radius:12px;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center"><svg width="20" height="20" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="M22 7l-10 6L2 7"></path></svg></span><div><h3 style="margin:0;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:#4A493F">Email</h3><p style="margin:.25rem 0 0;font-weight:600;overflow-wrap:anywhere">[correo@dominio.com]</p></div></div>
+        <div style="display:flex;gap:.85rem"><span aria-hidden="true" style="width:40px;height:40px;flex:none;border-radius:12px;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center"><svg width="20" height="20" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></span><div><h3 style="margin:0;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:#4A493F">Horarios</h3><p style="margin:.25rem 0 0;font-weight:600">[Días y horarios de atención]</p></div></div>
+        <div style="grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;padding-top:1.25rem;border-top:1px solid #D8CEB9">
+          <span style="font-weight:600;margin-right:.4rem">Seguinos</span>
+          <a href="#" aria-label="Instagram de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#1F4A34;color:#F6F1E6"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+          <a href="#" aria-label="Facebook de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#1F4A34;color:#F6F1E6"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://wa.me/549XXXXXXXXXX" aria-label="WhatsApp de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #1F4A34;color:#1F4A34;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#1F4A34;color:#F6F1E6"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg></a>
+        </div>
+      </div>
+      <div data-reveal="" style="min-height:260px;border-radius:26px;background:repeating-linear-gradient(135deg,#EAE2D0 0 12px,#E3D9C4 12px 24px);display:grid;place-items:center;padding:1rem;border:1px solid #E9E1CF"><span style="font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.75rem;padding:.45rem .8rem;border-radius:999px;background:#FFFDF8;color:#57564C;border:1px solid #E2D9C6;text-align:center">Mapa de Google (iframe embebido)</span></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer style="background:#173A28;color:#F6F1E6;--focus:#F6F1E6">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(3.5rem,7vw,5rem) clamp(1.25rem,4vw,2.5rem) 2rem">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:2.5rem;padding-bottom:3rem;border-bottom:1px solid #2E5A43">
+      <div style="display:flex;flex-direction:column;gap:1.25rem">
+        <a href="#inicio" aria-label="Mayflower English Study Centre, volver al inicio" style="display:flex;align-items:center;gap:.75rem;text-decoration:none;color:#F6F1E6">
+          <span style="width:52px;height:52px;border-radius:14px;background:#1F4A34;border:1px solid #2E5A43;display:grid;place-items:center;flex:none"><img src="assets/ship-white.png" alt="" style="width:36px"></span>
+          <span style="display:flex;flex-direction:column;line-height:1"><span style="font-family:var(--f-display,'Bricolage Grotesque',sans-serif);font-weight:var(--f-display-w,700);font-size:1.375rem">Mayflower</span><span style="font-size:.6875rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#C9D6C9;margin-top:.35rem">English Study Centre</span></span>
+        </a>
+        <p style="margin:0;color:#C9D6C9;max-width:18rem">[Frase breve de cierre sobre el instituto]</p>
+      </div>
+      <nav aria-label="Secciones">
+        <h2 style="margin:0 0 1rem;font-size:.8125rem;letter-spacing:.12em;text-transform:uppercase;color:#C9D6C9;font-weight:600">Secciones</h2>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.35rem">
+          <li><a href="#nosotros" style="display:inline-block;padding:.3rem 0;color:#F6F1E6;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 1.5px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 1.5px;color:#F6F1E6">Nosotros</a></li>
+          <li><a href="#cursos" style="display:inline-block;padding:.3rem 0;color:#F6F1E6;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 1.5px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 1.5px;color:#F6F1E6">Cursos</a></li>
+          <li><a href="#como-funciona" style="display:inline-block;padding:.3rem 0;color:#F6F1E6;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 1.5px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 1.5px;color:#F6F1E6">Cómo funciona</a></li>
+          <li><a href="#faq" style="display:inline-block;padding:.3rem 0;color:#F6F1E6;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 1.5px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 1.5px;color:#F6F1E6">Preguntas frecuentes</a></li>
+          <li><a href="#contacto" style="display:inline-block;padding:.3rem 0;color:#F6F1E6;text-decoration:none;background:linear-gradient(#F6F1E6,#F6F1E6) left 100%/0% 1.5px no-repeat;transition:background-size 300ms cubic-bezier(.16,1,.3,1)" style-hover="background-size:100% 1.5px;color:#F6F1E6">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 style="margin:0 0 1rem;font-size:.8125rem;letter-spacing:.12em;text-transform:uppercase;color:#C9D6C9;font-weight:600">Redes</h2>
+        <div style="display:flex;gap:.6rem">
+          <a href="#" aria-label="Instagram de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #5E8470;color:#F6F1E6;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#F6F1E6;color:#173A28"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg></a>
+          <a href="#" aria-label="Facebook de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #5E8470;color:#F6F1E6;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#F6F1E6;color:#173A28"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+          <a href="https://wa.me/549XXXXXXXXXX" aria-label="WhatsApp de Mayflower" style="width:44px;height:44px;border-radius:50%;border:1.5px solid #5E8470;color:#F6F1E6;display:grid;place-items:center;transition:transform 200ms cubic-bezier(.16,1,.3,1),background-color 200ms ease" style-hover="transform:translateY(-2px);background:#F6F1E6;color:#173A28"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path></svg></a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;padding-top:1.75rem;font-size:.875rem;color:#C9D6C9">
+      <p style="margin:0">© {{ year }} Mayflower English Study Centre. Todos los derechos reservados.</p>
+      <p style="margin:0">Villa Cañás, Santa Fe, Argentina</p>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showFabEl }}" hint-placeholder-val="{{ false }}">
+  <a href="https://wa.me/549XXXXXXXXXX" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp (se abre en una pestaña nueva)" tabindex="{{ fabTab }}" aria-hidden="{{ fabHidden }}" style="position:fixed;right:clamp(1rem,3vw,1.5rem);bottom:clamp(1rem,3vw,1.5rem);z-index:60;width:58px;height:58px;border-radius:50%;background:#1F4A34;color:#F6F1E6;display:grid;place-items:center;box-shadow:0 14px 30px -12px rgba(23,58,40,.65);border:2px solid #F6F1E6;opacity:{{ fabOp }};transform:{{ fabTf }};pointer-events:{{ fabPe }};transition:opacity 300ms cubic-bezier(.16,1,.3,1),transform 300ms cubic-bezier(.16,1,.3,1)" style-hover="transform:translateY(-3px) scale(1.04);color:#F6F1E6"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true" style="fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"></path><path d="M9.5 9.5c0 3 2 5 5 5l1-1.5-2-1-1 .8c-.9-.4-1.5-1-1.8-1.8l.8-1-1-2z"></path></svg></a>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;fontPair&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Bricolage + Hanken&quot;,&quot;Young Serif + Instrument Sans&quot;,&quot;Unbounded + Onest&quot;],&quot;default&quot;:&quot;Bricolage + Hanken&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Estilo&quot;},&quot;heroTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Verde&quot;,&quot;Crema&quot;],&quot;default&quot;:&quot;Verde&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Estilo&quot;},&quot;floatingWhatsApp&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Funciones&quot;}}">
+class Component extends DCLogic {
+  STATS = [99, 999, 9, 99];
+  FONTS = {
+    'Bricolage + Hanken': ["'Bricolage Grotesque'", "'Hanken Grotesk'", '700'],
+    'Young Serif + Instrument Sans': ["'Young Serif'", "'Instrument Sans'", '400'],
+    'Unbounded + Onest': ["'Unbounded'", "'Onest'", '600']
+  };
+  HERO = {
+    Verde: { bg:'#1F4A34', fg:'#F6F1E6', sub:'#D3DED1', ph1:'#285740', ph2:'#2C5E45', lblbg:'#173A28', lblfg:'#DCE5D8', line:'rgba(246,241,230,.28)', focus:'#F6F1E6', ship:'.05', grain:'.16' },
+    Crema: { bg:'#EFE7D6', fg:'#17150F', sub:'#4A493F', ph1:'#E4DBC7', ph2:'#DDD3BD', lblbg:'#FFFDF8', lblfg:'#57564C', line:'rgba(23,21,15,.22)', focus:'#1F4A34', ship:'0', grain:'.10' }
+  };
+  state = {
+    menuOpen: false,
+    isMobile: typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches,
+    scrolled: false, fab: false, faq: -1,
+    stats: this.STATS.slice(), status: '', errNombre: '', errMail: ''
+  };
+
+  applyVars() {
+    const r = document.documentElement.style;
+    const f = this.FONTS[this.props.fontPair] || this.FONTS['Bricolage + Hanken'];
+    r.setProperty('--f-display', f[0] + ', ui-sans-serif, system-ui, sans-serif');
+    r.setProperty('--f-body', f[1] + ', ui-sans-serif, system-ui, sans-serif');
+    r.setProperty('--f-display-w', f[2]);
+    const h = this.HERO[this.props.heroTheme] || this.HERO.Verde;
+    Object.entries(h).forEach(([k, v]) => r.setProperty('--hero-' + k, v));
+  }
+
+  componentDidMount() {
+    this.applyVars();
+    this.reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.mq = matchMedia('(max-width: 900px)');
+    this.onMq = e => this.setState({ isMobile: e.matches, menuOpen: e.matches && this.state.menuOpen });
+    this.mq.addEventListener('change', this.onMq);
+    this.onScroll = () => { if (this.raf) return; this.raf = requestAnimationFrame(() => { this.raf = 0; this.tick(); }); };
+    addEventListener('scroll', this.onScroll, { passive: true });
+    addEventListener('resize', this.onScroll, { passive: true });
+    this.onKey = e => {
+      if (e.key === 'Escape' && this.state.menuOpen) {
+        this.setState({ menuOpen: false });
+        const b = document.getElementById('mf-menu-btn'); if (b) b.focus();
+      }
+    };
+    addEventListener('keydown', this.onKey);
+    this.setupReveal();
+    this.setupCounters();
+    this.tick();
+  }
+
+  componentDidUpdate(prev) {
+    if (prev.fontPair !== this.props.fontPair || prev.heroTheme !== this.props.heroTheme) this.applyVars();
+  }
+
+  componentWillUnmount() {
+    removeEventListener('scroll', this.onScroll);
+    removeEventListener('resize', this.onScroll);
+    removeEventListener('keydown', this.onKey);
+    if (this.mq) this.mq.removeEventListener('change', this.onMq);
+    if (this.revealIO) this.revealIO.disconnect();
+    if (this.statIO) this.statIO.disconnect();
+    cancelAnimationFrame(this.raf); cancelAnimationFrame(this.countRaf);
+  }
+
+  tick() {
+    const y = window.scrollY, h = window.innerHeight;
+    const scrolled = y > 8, fab = y > h * 0.75;
+    if (scrolled !== this.state.scrolled || fab !== this.state.fab) this.setState({ scrolled, fab });
+    if (this.reduced) return;
+    document.querySelectorAll('[data-parallax]').forEach(el => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > h) return;
+      const off = (r.top + r.height / 2 - h / 2) * -0.05;
+      el.style.transform = 'translate3d(0,' + off.toFixed(1) + 'px,0) scale(1.08)';
+    });
+  }
+
+  setupReveal() {
+    if (this.reduced || !('IntersectionObserver' in window) || !Element.prototype.animate) return;
+    const h = window.innerHeight, idx = new Map();
+    this.revealIO = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      if (e.target.__mfAnim) e.target.__mfAnim.play();
+      this.revealIO.unobserve(e.target);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: 0.01 });
+    document.querySelectorAll('[data-reveal]').forEach(el => {
+      const p = el.parentElement, i = idx.get(p) || 0; idx.set(p, i + 1);
+      if (el.getBoundingClientRect().top < h * 0.9) return;
+      const a = el.animate(
+        [{ opacity: 0, transform: 'translateY(28px)' }, { opacity: 1, transform: 'none' }],
+        { duration: 700, delay: Math.min(i, 5) * 70, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'both' }
+      );
+      a.pause();
+      a.onfinish = () => a.cancel();
+      el.__mfAnim = a;
+      this.revealIO.observe(el);
+    });
+  }
+
+  setupCounters() {
+    const el = document.getElementById('mf-stats');
+    if (!el || this.reduced || !('IntersectionObserver' in window)) return;
+    const run = () => {
+      const t0 = performance.now(), dur = 1400;
+      const step = t => {
+        const p = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - p, 3);
+        this.setState({ stats: this.STATS.map(v => Math.round(v * e)) });
+        if (p < 1) this.countRaf = requestAnimationFrame(step);
+      };
+      this.countRaf = requestAnimationFrame(step);
+    };
+    this.setState({ stats: this.STATS.map(() => 0) });
+    this.statIO = new IntersectionObserver(entries => {
+      if (entries.some(e => e.isIntersecting)) { this.statIO.disconnect(); run(); }
+    }, { threshold: 0.4 });
+    this.statIO.observe(el);
+  }
+
+  onSubmit = e => {
+    e.preventDefault();
+    const f = e.currentTarget;
+    const n = f.elements.nombre, m = f.elements.email;
+    const errNombre = n.value.trim() ? '' : 'Escribí tu nombre.';
+    const errMail = !m.value.trim() ? 'Escribí tu email.' : (m.validity.valid ? '' : 'Revisá el formato del email.');
+    n.setAttribute('aria-invalid', errNombre ? 'true' : 'false');
+    m.setAttribute('aria-invalid', errMail ? 'true' : 'false');
+    if (errNombre || errMail) {
+      this.setState({ errNombre, errMail, status: '' });
+      (errNombre ? n : m).focus();
+      return;
+    }
+    f.reset();
+    this.setState({ errNombre: '', errMail: '', status: '¡Gracias! [Mensaje de confirmación del envío]' });
+  };
+
+  renderVals() {
+    const s = this.state;
+    const fmt = n => new Intl.NumberFormat('es-AR').format(n);
+    const faq = {};
+    for (let i = 0; i < 5; i++) {
+      const open = s.faq === i;
+      faq['faqExp' + i] = open ? 'true' : 'false';
+      faq['faqRows' + i] = open ? '1fr' : '0fr';
+      faq['faqVis' + i] = open ? 'visible' : 'hidden';
+      faq['faqOp' + i] = open ? 1 : 0;
+      faq['faqRot' + i] = open ? 'rotate(45deg)' : 'none';
+      faq['faqToggle' + i] = () => this.setState(st => ({ faq: st.faq === i ? -1 : i }));
+    }
+    const fabOn = s.fab && !s.menuOpen;
+    return {
+      ...faq,
+      showDesktopNav: !s.isMobile,
+      isMobile: s.isMobile,
+      menuOpen: s.menuOpen,
+      menuClosed: !s.menuOpen,
+      mobileMenuVisible: s.isMobile && s.menuOpen,
+      menuExp: s.menuOpen ? 'true' : 'false',
+      menuLabel: s.menuOpen ? 'Cerrar menú' : 'Abrir menú',
+      toggleMenu: () => this.setState(st => ({ menuOpen: !st.menuOpen })),
+      closeMenu: () => this.setState({ menuOpen: false }),
+      headerLine: s.scrolled ? 'rgba(23,21,15,.10)' : 'transparent',
+      s0: fmt(s.stats[0]), s1: fmt(s.stats[1]), s2: fmt(s.stats[2]), s3: fmt(s.stats[3]),
+      onSubmit: this.onSubmit,
+      formStatus: s.status, errNombre: s.errNombre, errMail: s.errMail,
+      year: new Date().getFullYear(),
+      showFabEl: this.props.floatingWhatsApp ?? true,
+      fabOp: fabOn ? 1 : 0,
+      fabTf: fabOn ? 'none' : 'translateY(16px) scale(.9)',
+      fabPe: fabOn ? 'auto' : 'none',
+      fabTab: fabOn ? 0 : -1,
+      fabHidden: fabOn ? 'false' : 'true'
+    };
+  }
+}
+</script>
+</body>
+</html>
