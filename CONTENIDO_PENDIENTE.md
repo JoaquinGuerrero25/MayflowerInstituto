@@ -7,7 +7,7 @@ El sitio está funcional con contenido de ejemplo. Antes de publicarlo hay que r
 
 ## Datos de contacto (`index.html`, sección `#contacto` y footer)
 - Dirección: ✅ Calle 61 N.º 662, Villa Cañás, Santa Fe (ya cargada, incluido el mapa embebido).
-- Teléfono / WhatsApp real (hoy: `+54 9 3401 00-0000` y enlaces `https://wa.me/5493401000000`).
+- Teléfono / WhatsApp: ✅ +54 9 3462 68-2799 (ya cargado en todos los enlaces `wa.me` y en el texto visible).
 - Email real (hoy: `info@mayflowervc.com.ar`).
 - Horarios reales de atención.
 - Links reales de Instagram y Facebook (hoy apuntan a `#`).
