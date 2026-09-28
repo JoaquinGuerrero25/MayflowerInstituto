@@ -6,12 +6,11 @@ El sitio está funcional con contenido de ejemplo. Antes de publicarlo hay que r
 - En `index.html`, buscar `TU_FORM_ID` en el `<form action="https://formspree.io/f/TU_FORM_ID">` y reemplazarlo por el ID real de un formulario creado en [formspree.io](https://formspree.io) (gratis).
 
 ## Datos de contacto (`index.html`, sección `#contacto` y footer)
-- Dirección real (hoy: "San Martín 1234, Villa Cañás, Santa Fe" — es de ejemplo).
+- Dirección: ✅ Calle 61 N.º 662, Villa Cañás, Santa Fe (ya cargada, incluido el mapa embebido).
 - Teléfono / WhatsApp real (hoy: `+54 9 3401 00-0000` y enlaces `https://wa.me/5493401000000`).
 - Email real (hoy: `info@mayflowervc.com.ar`).
 - Horarios reales de atención.
 - Links reales de Instagram y Facebook (hoy apuntan a `#`).
-- El mapa embebido usa una búsqueda genérica de "Villa Cañás, Santa Fe"; conviene reemplazarlo por un iframe de Google Maps con la dirección exacta del instituto.
 
 ## Textos
 - Copy de "Nosotros", historia del instituto, nombre y cargo real de la directora/o.
