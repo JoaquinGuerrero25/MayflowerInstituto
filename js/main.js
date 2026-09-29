@@ -104,7 +104,8 @@
         const eased = 1 - Math.pow(1 - p, 3);
         targets.forEach(el => {
           const to = Number(el.dataset.countTo);
-          el.textContent = fmt.format(Math.round(to * eased));
+          const v = Math.round(to * eased);
+          el.textContent = el.hasAttribute('data-plain') ? String(v) : fmt.format(v);
         });
         if (p < 1) requestAnimationFrame(step);
       };
